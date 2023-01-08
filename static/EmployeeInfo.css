@@ -59,6 +59,12 @@
   align-items: center;
 }
 
+.plus-icon1 {
+  padding-left: 440px;
+  margin-top: 10px;
+  align-items: center;
+}
+
 .fa-tag {
   color: maroon;
 }
@@ -179,6 +185,10 @@ border:none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 5px;
   box-shadow: 5px 10px rgb(236, 212, 212);
+  
+}
+.personal-title{
+  display: inline-flex;
 }
 
 a{

@@ -202,9 +202,13 @@ def delete_data(uid):
     cur.execute("delete from skillset where uid=%s and empid=%s",(uid,seid,))
     cur.connection.commit()
     cur.close() 
-    
-
     return redirect(url_for('employeeinfo',eid=seid))
+
+@app.route("/personaldetail-update/<int:id>",methods=["GET","POST"])
+def personaldetailsupdate(id):
+    id=session["empid"]
+    return render_template("/Member/PersonalDetails.html")
+
 
 
 @app.route('/userlogout')

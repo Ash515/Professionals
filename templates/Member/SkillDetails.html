@@ -85,7 +85,12 @@
             }
             .skill-rate{
                 text-align: center;
+                color:orange;
             }
+ 
+
+
+            
         </style>
         <script>
         function confirmation()
@@ -115,7 +120,7 @@
 
         <div class="skill-rate">
             {%for data in skill_data%}
-              <p><b>Rate:</b> {{data[3]}}</p>
+               <div class="skills "><p><b>Skill Rate:</b> {{data[3]}}</p></div>
             {%endfor%}
         </div>
 
