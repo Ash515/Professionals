@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="icon" href="/static/Assets/hr-icon.png" />
-        <link rel="stylesheet" href="">
+        <title>Skill Details</title>
         <style>
             body{
                 background-color: antiquewhite;
@@ -83,6 +83,9 @@
                 color:white;
                 text-decoration: none;
             }
+            .skill-rate{
+                text-align: center;
+            }
         </style>
         <script>
         function confirmation()
@@ -109,6 +112,12 @@
         <h2 id="skill-name">{{i}}</h2>
         
         {%endfor%}
+
+        <div class="skill-rate">
+            {%for data in skill_data%}
+              <p><b>Rate:</b> {{data[3]}}</p>
+            {%endfor%}
+        </div>
 
         <div class="buttons">
             {%for k in del_id %}

@@ -173,13 +173,10 @@ def employeeskills(seid):
     seid=session['empid']
     if request.method=='POST':
         skill = request.form['skills']
-        # cur.execute("INSERT INTO skillsets(id,s1,s2,s3,s4,s5) VALUES (%s,%s,%s,%s,%s,%s)",
-        # (session['empid'],"k","c","e","d","p",))   
+        skillrate=request.form['skillrate']
         cur = con.cursor()   
-        cur.execute("insert into skillset(empid,skill) values(%s,%s)",(seid,skill,))
-   
+        cur.execute("insert into skillset(empid,skill,rating) values(%s,%s,%s)",(seid,skill,skillrate,))
         con.commit()
-    
     return render_template('/Member/Employeeskills.html',id=seid)
 
 @app.route('/skilldetails/<int:uid>',methods=['post','get'])
@@ -191,7 +188,9 @@ def skilldetails(uid):
     cur = con.cursor() 
     cur.execute("select uid from skillset where uid=%s",(uid,)) 
     del_id=cur.fetchone()
-    return render_template('/Member/SkillDetails.html',skillrecord=skillrecord,del_id=del_id,seid=seid)
+    cur.execute("select * from skillset where uid=%s",(uid,))
+    skill_data=cur.fetchall()
+    return render_template('/Member/SkillDetails.html',skillrecord=skillrecord,del_id=del_id,seid=seid,skill_data=skill_data)
 
 @app.route("/delete_data/<int:uid>", methods=["GET","POST"])
 def delete_data(uid):
