@@ -1,0 +1,58 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.main{
+    margin-left: 650px;
+    margin-top: 100px;
+
+}
+input{
+    margin-top: 10px;
+    width:300px;
+    height:30px;
+}
+input::placeholder{
+    padding-left: 5px;
+}
+textarea{
+    margin-top: 10px;
+    width:300px;
+    height:30px;
+}
+textarea::placeholder{
+    padding-left: 5px;
+}
+.main-header{
+    width:100%;
+    position:fixed;
+    top:0px;
+    background-color: rgb(75, 7, 7);
+  color: white;
+}
+.title{
+    display: inline-flex;
+}
+#heading{
+    margin-left: 50px;
+    font-size: 18px;
+}
+#eid{
+    margin-left: 400px;
+}
+#ename{
+    margin-left: 90px;
+}
+#email{
+    margin-left: 90px;
+}
+#submit{
+    margin-top: 20px;
+    width:310px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

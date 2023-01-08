@@ -3,12 +3,48 @@
     <head>
         <link rel="icon" href="/static/Assets/hr-icon.png" />
         <title>Personal Details</title>
+        <link rel="stylesheet" type="text/css" href="/static/PersonalDetails.css" />
     </head>
 
     <body>
-         <div class="title">
-            <P>Personal Details</P>
-            <hr>
+        <div class="main-header">
+            <div class="title">
+                <P id="heading"><b>Personal Details</b></P>
+                <p id="eid">Employee ID - </p>
+                <p id="ename">Name - </p>
+                <p id="email">E-mail - </p>
+    
+                
+             </div> 
+        </div>
+         
+        
+
+         <div class="main">
+                
+               
+            <form action="" method="post">
+                <p><b>Basic Info</b></p>
+                <input type="text" name="phno" id="phno" placeholder="Phone number" required><br>
+                <input type="text" name="fname" id="fname" placeholder="Father name" required><br>
+                <input type="text" name="mname" id="mname" placeholder="Mother name" required><br>
+                <input type="text" name="gender" id="gender" placeholder="Gender" required><br>
+                <input type="text" name="pemail" id="pemail" placeholder="Personal Email" required><br>
+                <input type="text" name="dob" id="dob" placeholder="Date of Birth" required><br>
+                <input type="text" name="pan" id="pan" placeholder="PAN Card Number" required><br>
+                <textarea name="address" id="address" placeholder="Address" required></textarea><br>
+
+                <p><b>Education</b></p>
+                <input type="text" name="degree" id="degree" placeholder="Degree" required><br>
+                <input type="text" name="specialization" id="specialization" placeholder="specialization" required><br>
+                <input type="text" name="college" id="college" placeholder="College name" required><br>
+
+                <p><b>Bank Details</b></p>
+                <input type="text" name="bankname" id="bankname" placeholder="Bank name" required><br>
+                <input type="text" name="accno" id="accno" placeholder="Account number" required><br>
+               
+                <input type="submit" id="submit" value="Submit for Approval">
+            </form>
          </div>
     </body>
 </html>
