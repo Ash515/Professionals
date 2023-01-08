@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    
     <div id="site-1">
       {% for i in team_p%}
       <div class="main">
@@ -34,60 +33,78 @@
         <p><b>Reporting To:</b>&nbsp;&nbsp;&nbsp;{{i[5]}}</p>
       </div>
 
-      <div class="skillset-field">
-        <div class="skillset-field-title">
-          <div class="skillset-title">
-            <p id="skillset"><i class="fa fa-tag"></i>&nbsp;&nbsp;Skill Set</p>
+      <div class="flex-a">
+        <div class="skillset-field">
+          <div class="skillset-field-title">
+            <div class="skillset-title">
+              <p id="skillset">
+                <i class="fa fa-tag"></i>&nbsp;&nbsp;Skill Set
+              </p>
+            </div>
+            {% if i[0]==s_id: %}
+            <div class="plus-icon">
+              <a href="/employeeskills/{{i[0]}}"
+                ><button id="plus-button"><i class="fa fa-plus"></i></button
+              ></a>
+            </div>
+            {%endif%}
           </div>
-          {% if i[0]==s_id: %}
-          <div class="plus-icon">
-            <a href="/employeeskills/{{i[0]}}"
-              ><button id="plus-button"><i class="fa fa-plus"></i></button
-            ></a>
+          <div class="skill-area">
+            {% for i in empSkills%}
+            <ul id="empskills-ul">
+              <li>
+                <button id="skill-button">
+                  <a href="/skilldetails/{{i[1]}}">{{i[2]}}</a>
+                </button>
+              </li>
+            </ul>
+
+            {%endfor%}
           </div>
-          {%endif%}
         </div>
-        <div class="skill-area">
-          {% for i in empSkills%}
-          <ul id="empskills-ul">
-            <li>
-              <button id="skill-button">
-                <a href="/skilldetails/{{i[1]}}">{{i[2]}}</a>
-              </button>
-            </li>
-          </ul>
 
-          {%endfor%}
-        </div>
-      </div>
-
-      <div class="personal-field">
-        <div class="personal-title">
-          <p id="skillset">
-            <i class="fa fa-list"></i>&nbsp;&nbsp;Personal Details
-          </p>
-          <div class="plus-icon1">
-            <a href="/personaldetail-update/{{s_id}}"><button id="plus-button"><i class="fa fa-plus"></i></button
-            ></a>
+        <div class="personal-field">
+          <div class="personal-title">
+            <p id="skillset">
+              <i class="fa fa-user"></i>&nbsp;&nbsp;Personal Details
+            </p>
+            <div class="plus-icon1">
+              <a href="/personaldetail-update/{{s_id}}"
+                ><button id="plus-button"><i class="fa fa-plus"></i></button
+              ></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div id="site-2">
-    <div class="skillset-page">
-        <div class="skillset-form">
-            <form action="/employeeinfo/{{i[0]}}" method="post">
- <input type="text" id="skill-input" name="skills" placeholder="Enter the skill name one at a time"><br><br>
-<input type="submit" id="submit-button">
-
-            </form>
-            <button id="cancel-button" onclick="Cancel()">Cancel</button>
-        </div>
-        
+<div class="flex-b">
+  <div class="basic-field">
+    <div class="basic-field-title">
+      <p id="skillset">
+        <i class="fa fa-list"></i>&nbsp;&nbsp;Basic Details
+      </p>
+      <div class="plus-icon2">
+        <a href=""><button id="plus-button"><i class="fa fa-plus"></i></button
+        ></a>
+      </div>
     </div>
-    </div> -->
+  </div>
 
+  <div class="work-field">
+    <div class="work-title">
+      <p id="skillset">
+        <i class="fa fa-briefcase"></i>&nbsp;&nbsp;Work
+      </p>
+      <div class="plus-icon3">
+        <a href=""><button id="plus-button"><i class="fa fa-plus"></i></button
+        ></a>
+      </div>
+    </div>
+  </div>
+
+
+</div>    
     {%endfor%}
   </body>
 </html>

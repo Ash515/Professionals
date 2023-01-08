@@ -37,8 +37,8 @@
 
 .skillset-field {
   width: 650px;
-  height: 150px;
-  margin-left: 450px;
+  height: 250px;
+  margin-left:80px;
   margin-top: 20px;
   background-color: white;
   border: 1px solid;
@@ -49,6 +49,9 @@
   overflow:auto;
 }
 
+.flex-a{
+  display: flex;
+}
  .skillset-field-title {
   display: inline-flex;
 } 
@@ -64,7 +67,16 @@
   margin-top: 10px;
   align-items: center;
 }
-
+.plus-icon2 {
+  padding-left: 470px;
+  margin-top: 10px;
+  align-items: center;
+}
+.plus-icon3 {
+  padding-left: 520px;
+  margin-top: 10px;
+  align-items: center;
+}
 .fa-tag {
   color: maroon;
 }
@@ -81,10 +93,7 @@
   padding-left: 20px;
 }
 
-#site-2 {
-  margin-top: 180px;
-  display: none;
-}
+
 
 .skillset-page {
   background-color: white;
@@ -176,8 +185,8 @@ border:none;
 } */
 .personal-field{
   width: 650px;
-  height: 150px;
-  margin-left: 450px;
+  height: 250px;
+  margin-left: 50px;
   margin-top: 20px;
   background-color: white;
   border: 1px solid;
@@ -191,7 +200,51 @@ border:none;
   display: inline-flex;
 }
 
+
+
+
 a{
   text-decoration: none;
 color: white;
+}
+
+
+
+
+.basic-field {
+  width: 650px;
+  height: 250px;
+  margin-left:80px;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  box-shadow: 5px 10px rgb(236, 212, 212);
+  overflow:auto;
+}
+.basic-field-title {
+  display: inline-flex;
+} 
+
+.work-field{
+  width: 650px;
+  height: 250px;
+  margin-left: 50px;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  box-shadow: 5px 10px rgb(236, 212, 212);
+  
+}
+.work-title{
+  display: inline-flex;
+}
+
+.flex-b{
+  display: flex;
 }
