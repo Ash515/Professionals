@@ -67,16 +67,7 @@
   margin-top: 10px;
   align-items: center;
 }
-.plus-icon2 {
-  padding-left: 470px;
-  margin-top: 10px;
-  align-items: center;
-}
-.plus-icon3 {
-  padding-left: 520px;
-  margin-top: 10px;
-  align-items: center;
-}
+
 .fa-tag {
   color: maroon;
 }
@@ -248,3 +239,23 @@ color: white;
 .flex-b{
   display: flex;
 }
+
+
+
+.education-field {
+  width: 1355px;
+  height: 150px;
+  margin-left:80px;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  box-shadow: 5px 10px rgb(236, 212, 212);
+  overflow:auto;
+}
+.education-field-title {
+  display: inline-flex;
+} 
+
