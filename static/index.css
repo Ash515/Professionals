@@ -1,0 +1,83 @@
+body{
+    background-image: url("/static/Assets/hr-image.jpg");
+    background-size: cover;
+}
+
+
+.heading{
+    text-align: center;
+    background-color: green;
+    color:white;
+    height: 60px;
+    padding-top: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.about{
+    width: 600px;
+    height: 100px;
+    margin-left: 450px;
+    font-size: 18px;
+    margin-top: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-top: 20px;
+    
+}
+
+.menu{
+    margin-top: 80px;
+    display: inline-flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+#tab-1{
+    margin-left: 100px;
+    width:400px;
+    height:100px;
+    color:white;
+    text-align: center;
+    padding-top: 50px;
+    background-color: blue;
+}
+#tab-2{
+    margin-left: 50px;
+    width:400px;
+    height:100px;
+    color:white;
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgba(255, 64, 0, 0.509);
+}
+#tab-3{
+    margin-left: 50px;
+    width:400px;
+    height:100px;
+    color:white;
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgba(14, 32, 5, 0.637);
+}
+.sigin{
+    
+    background-color:rgb(12, 5, 31);
+    width: 200px;
+    height: 50px;
+    padding-top:3px;
+    margin-left: 650px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    color:white;
+}

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Profile.css')}}">
+        <link rel="icon" href="/static/Assets/hr-icon.png">
+    </head>
+    <body>
+        <div class="main">
+          <h2 id="org-id">
+            {% for data in profile: %}
+              {{data[8]}}
+             {% endfor %}
+          </h2>
+            <hr>
+           
+        </div>
+       
+        <div class="edit">
+            
+            {% for id in profile %}
+            <a href="/updateprofile/{{id[0]}}" id="edit-details">Edit Details</a>
+            {%endfor%}
+        </div>
+        <div class="back">
+            <a href="{{url_for('main')}}" id="back">Back</a>
+        </div>
+        <div class="details">
+            {% for info in profile %}
+            <p id="name"><b>Name:</b>  &nbsp;&nbsp;{{info[2]}}</p>
+            <p id="e-id"><b>Employee ID:</b>  &nbsp;&nbsp;{{info[0]}}</p>
+            <p id="designation"><b>Designation:</b>  &nbsp;&nbsp;{{info[5]}}</p>
+            <p id="team"><b>Team:</b>  &nbsp;&nbsp;{{info[6]}}</p>
+            <p id="r-to"><b>Reporting to:</b>  &nbsp;&nbsp;{{info[7]}}</p>
+            <p id="ph-no"><b>Phone Number:</b>  &nbsp;&nbsp;{{info[3]}}</p>
+            <p id="seating"><b>Seating Location:</b>  &nbsp;&nbsp;{{info[4]}}</p>
+
+             {%endfor%}
+             
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="/static/Assets/hr-icon.png" />
+    <style>
+
+    .title{
+        text-align: center;
+        background-color: maroon;
+        color: white;
+        height: 50px;
+        padding-top: 5px;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .dept-details{
+        text-align: center;
+        font-size: 14px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+      ul {
+        list-style-type: none;
+        margin-top: 50px;
+        margin-left: 60px;
+
+        overflow: hidden;
+      }
+
+      li {
+        cursor: pointer;
+        float: left;
+        padding-left: 50px;
+        background-color: white;
+        margin-left: 10px;
+        margin-top: 20px;
+        width: 200px;
+        border-radius: 5px;
+        border: 1px solid;
+
+        box-shadow: 5px 10px #888888;
+      }
+
+       li a {
+        display: block;
+        color: maroon;
+        
+
+        text-decoration: none;
+      } 
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <p><b><i class="fa fa-sitemap"></i> &nbsp;&nbsp;{{team_name}}</b></p>
+    </div>
+    <div class="dept-details">
+        <p><b>Department Head - </b>{{head}}</p>
+    </div>
+    <div class="main">
+      <ul>
+        {% for data in team_profile %}
+        <li><a href="/employeeinfo/{{data[0]}}">
+          <p id="name"><i class="fa fa-user"></i> <b>{{data[1]}}</b></p>
+          <p id="id"><i class="fa fa-id-badge"></i> {{data[0]}}</p>
+          <p id="destination">
+            <i class="fa fa-map-pin"></i> {{data[2]}}
+          </p>
+          <p id="extn"><i class="fa fa-phone"></i> {{data[4]}}</p>
+          <p id="team"><i class="fa fa-sitemap"></i> {{data[6]}}</p>
+
+          {% endfor %}
+       </a> </li>
+      </ul>
+    </div>
+  </body>
+</html>

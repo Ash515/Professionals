@@ -1,0 +1,142 @@
+$Cursor:pointer;
+$BorderStyle:1px solid;
+$fontColor:white;
+$buttonBorderRadius:5px;
+$Border: none;
+$fontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$marginLeftButton:70px;
+
+.main {
+    height: 100px;
+    background-color: rgb(75, 7, 7);
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-flex;
+    
+}
+
+.details {
+    margin-left: 450px;
+    padding-left: 200px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border: $BorderStyle;
+    border-radius: 5px;
+    box-shadow: 5px 10px rgb(236, 212, 212);
+    margin-top: 10px;
+    width: 450px;
+}
+
+.reporting-to {
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 5px 10px rgb(236, 212, 212);
+    margin-top: 30px;
+    height: 50px;
+    margin-left: 450px;
+    padding-left: 200px;
+    font-size: 14px;
+    font-family: $fontFamily;
+    background-color: white;
+    border: $BorderStyle;
+
+}
+.skillset-field{
+  
+    width:650px;
+    height:150px;
+    margin-left: 450px;
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    box-shadow: 5px 10px rgb(236, 212, 212);
+}
+.skillset-field{
+    display: inline-flex;
+}
+.plus-icon{
+    padding-left: 500px;
+    margin-top: 10px;
+     align-items: center;
+    // background-color: pink;
+    // width:20px;
+    
+    
+}
+.fa-tag{
+    color: maroon;
+}
+#plus-button{
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: maroon;
+    color: white;
+}
+#skillset{
+    font-size: 16px;
+    padding-left: 20px;
+}
+// #site-1{
+//     display:none;
+// }
+#site-2{
+  
+
+   
+   margin-top: 180px;
+    display: none;
+}
+.skillset-page{
+  background-color: white;
+  width:400px;
+  height:300px;
+margin-left: 530px;
+padding-left: 100px;
+padding-top: 50px;
+border-radius: 5px;
+}
+#skill-input{
+    width: 300px;
+    height: 100px;
+    font-size: 14px;
+}
+#submit-button{
+    width:150px;
+    height: 30px;
+    cursor:$Cursor;
+    background-color: rgb(175, 106, 240);
+    color:$fontColor;
+    border-radius: $buttonBorderRadius;
+    font-size: 14px;
+    font-family: $fontFamily;
+    border: none;
+    margin-left: $marginLeftButton;
+}
+body{
+    background-color:white;
+}
+#cancel-button{
+    width:150px;
+    height: 30px;
+    cursor:$Cursor;
+    margin-left: 10px;
+    border:$Border;
+    color:$fontColor;
+    text-align: center;
+    background-color: rgb(215, 75, 75);
+border-radius: $buttonBorderRadius;
+padding-top: 5px;
+margin-left: $marginLeftButton;
+margin-top: 10px;
+}
+.button-fields{
+    display: inline-flex;
+}
+

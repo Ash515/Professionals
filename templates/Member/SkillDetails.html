@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/static/Assets/hr-icon.png" />
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                background-color: antiquewhite;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #title{
+                text-align: center;
+               
+                font-size:20px;
+            }
+            li{
+                list-style: none;
+            }
+            #delete-button{
+                margin-left: 10px;
+                background-color: rgb(88, 13, 13);
+                color:white;
+                border:none;
+                width:100px;
+                height: 20px;
+                border-radius: 5px;
+                
+
+            }
+            #update-button{
+                margin-left: 10px;
+                margin-left: 10px;
+                background-color: rgb(51, 22, 95);
+                color:white;
+                border:none;
+                width:100px;
+                height: 20px;
+                border-radius: 5px;
+                
+            }
+            button{
+                cursor: pointer;
+            }
+
+            .skill-list{
+                margin-left: 450px;
+                margin-top: 100px;
+                
+                background-color: white;
+                box-shadow: 5px 10px #88888836;
+                width:600px;height: 250px;
+                
+                
+            }
+            #skill-name{
+               text-align: center;
+                padding-top: 20px;
+            }
+            #submit-form{
+                display: none;
+                margin-top: 5px;
+            }
+            #cancel-button{
+                margin-left: 175px;
+                background-color: rgba(139, 23, 23, 0.763);
+                color:white;
+                border:none;
+              
+            }
+            #submit-button{
+                background-color: green;
+                color:white;
+                border:none;
+                cursor: pointer;
+            }
+            
+            .buttons{
+                margin-top: 100px;
+                margin-left: 180px;
+            }
+
+            a{
+                color:white;
+                text-decoration: none;
+            }
+        </style>
+        <script>
+        function confirmation()
+       {
+         asking= confirm("Are you sure to delete this skill ?");         
+         if (asking==true)
+           {
+             return true;             
+           }
+        else
+           {
+             return false;             
+           }              
+       }
+        </script>
+    </head>
+    <div class="main">
+        <h2 id="title">Skill Details</h2>
+        <hr>
+    </div>
+    <div class="skill-list">
+        <!-- p=skillrecord -->
+        {%for i in skillrecord%}
+        <h2 id="skill-name">{{i}}</h2>
+        
+        {%endfor%}
+
+        <div class="buttons">
+            {%for k in del_id %}
+            <button id="delete-button" onclick="return confirmation()"><a href="{{url_for('delete_data',uid=k)}}">Delete</a></button> 
+            {%endfor%}
+            
+            <button id="update-button"><a href="{{url_for('employeeinfo',eid=seid)}}">Cancel</a></button>
+            
+        </div>
+        
+        
+        
+        
+    </div>
+</html>
+
+
+
+<!--
+
+    <ul>
+            
+            <li>Python<button id="delete-button">Delete</button><button id="update-button" onclick="DisplayForm()">Update</button>
+                <div id="submit-form">
+                    <form action="" method="post" id="form-id">
+                        <input type="text" name="update-skill" id="update-skill" >
+                        <input type="submit" id="submit-button">
+                    </form>
+                    <button onclick="HiddenForm()" id="cancel-button">Cancel</button>
+
+                </div>
+            </li> 
+            <li>C++<button id="delete-button">Delete</button><button id="update-button" onclick="DisplayForm()">Update</button>
+                <div id="submit-form">
+                    <form action="" method="post" id="form-id">
+                        <input type="text" name="update-skill" id="update-skill" >
+                        <input type="submit" id="submit-button">
+                    </form>
+                    <button onclick="HiddenForm()" id="cancel-button">Cancel</button>
+
+                </div>
+            </li> 
+            
+        </ul>
+-->

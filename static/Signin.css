@@ -1,0 +1,54 @@
+body{
+   
+    background-image: url("/static/Assets/Auth-image.jpg");
+    background-size: cover;
+}
+
+#sigin-title{
+    color: white;
+    font-size: 20px;
+}
+.main{
+    padding-left: 200px;
+    padding-top: 100px;
+    margin-left:400px;
+    width:500px;
+    height: 400px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(50, 177, 128, 0.662);
+    border-radius: 20px;
+}
+.message{
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 18px;
+    font-style: bold;
+    margin-left: 0px;
+}
+
+    
+#id-field {
+    margin-left:50px;
+    width: 250px;
+    height:30px;
+}
+
+
+#password-field{
+    margin-left: 20px;
+    width: 250px;
+    height:30px;
+  
+}
+#submit-field{
+   margin-top: 20px;
+   margin-left: 70px;
+    width: 200px;
+    height:50px;
+    font-size: 15px;
+    background-color: rgba(30, 1, 23, 0.468);
+    border-radius: 10px;
+    cursor:pointer;
+    color:white;
+  
+}

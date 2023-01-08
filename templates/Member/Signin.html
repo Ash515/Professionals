@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='Signin.css')}}"
+    />
+    <link rel="icon" type="image/x-icon" href="/Assets/hr-icon.png" />
+    <link rel="icon" href="/static/Assets/hr-icon.png" />
+    <title>Professional - Sigin</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <h2 id="sigin-title">Sign In</h2>
+
+      <form action="/empsignin" method="post">
+        <b>E-ID</b>
+        <input
+          name="empid"
+          type="text"
+          id="id-field"
+          placeholder="Enter your Employee ID"
+        />
+        <br /><br />
+        <b>Password</b
+        ><input
+          name="emppass"
+          type="password"
+          id="password-field"
+          placeholder="Enter your Password"
+        /><br />
+        <input type="submit" id="submit-field" />
+      </form>
+      <div class="message">
+        <b>
+          {% with messages = get_flashed_messages() %} {% if messages %} {% for
+          message in messages %}
+          <p>{{ message }}</p>
+          {% endfor %} {% endif %} {% endwith %}
+        </b>
+      </div>
+    </div>
+  </body>
+</html>

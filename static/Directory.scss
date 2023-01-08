@@ -1,0 +1,82 @@
+$boxSize:border-box;
+$fontFamily:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$textAlign:center;
+$borderRadius:10px;
+
+* {
+  box-sizing:$boxSize;
+  font-family:$fontFamily
+
+}
+
+// #title{
+    
+// // height:50px;
+// // padding-top: 5px;
+    
+// }
+
+
+
+
+.column-1{
+    float: left;
+    padding-top: 200px;
+    width: 700px;
+  font-size: 25px;
+    height: 700px; /* Should be removed. Only for demonstration */
+    background-color: rgb(66, 4, 4);
+    color:white;
+    text-align: $textAlign;
+  }
+
+
+  .column-2{
+    float: left;
+    
+    width:800px;
+    padding: 10px;
+    background-color: white;
+    height: 700px; /* Should be removed. Only for demonstration */
+   overflow:scroll;
+      
+  
+  }
+.teams{
+    background-color: maroon;
+    color:white;
+    text-align: $textAlign;
+    border-radius:5px;
+    height:30px;
+
+}
+
+ul{
+    list-style: none;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 130px;
+}
+li{
+  margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    width:500px;
+    height:50px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid;
+  
+    box-shadow: 5px 10px #888888;
+
+   
+}
+a{
+    text-decoration: none;
+    color:maroon;
+}
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

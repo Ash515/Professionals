@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="/static/Assets/hr-icon.png" />
+    <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='EmployeeInfo.css')}}">
+    <script src="{{url_for('static', filename='EmployeeInfo.js')}}"></script> -->
+    <link rel="stylesheet" type="text/css" href="/static/EmployeeInfo.css" />
+    <!-- <script src="/static/EmployeeInfo.js"></script>  -->
+  </head>
+
+  <body>
+    {{eid}}
+    <div id="site-1">
+      {% for i in team_p%}
+      <div class="main">
+        <b>{{i[1]}}</b>
+      </div>
+
+      <div class="details">
+        <p><b>Employee ID :</b> &nbsp;&nbsp; {{i[0]}}</p>
+        <p><b>Designation :</b>&nbsp;&nbsp;{{i[2]}}</p>
+        <p><b>Team :</b>&nbsp;&nbsp;&nbsp;{{i[6]}}</p>
+        <p><b>Seating:</b>&nbsp;&nbsp;&nbsp;{{i[3]}}</p>
+        <p><b>Extention:</b>&nbsp;&nbsp;&nbsp;{{i[4]}}</p>
+      </div>
+      <div class="reporting-to">
+        <p><b>Reporting To:</b>&nbsp;&nbsp;&nbsp;{{i[5]}}</p>
+      </div>
+
+      <div class="skillset-field">
+        <div class="skillset-field-title">
+          <div class="skillset-title">
+            <p id="skillset"><i class="fa fa-tag"></i>&nbsp;&nbsp;Skill Set</p>
+          </div>
+          {% if i[0]==s_id: %}
+          <div class="plus-icon">
+            <a href="/employeeskills/{{i[0]}}"
+              ><button id="plus-button"><i class="fa fa-plus"></i></button
+            ></a>
+          </div>
+          {%endif%}
+        </div>
+        <div class="skill-area">
+          {% for i in empSkills%}
+          <ul id="empskills-ul">
+            <li>
+              <button id="skill-button">
+                <a href="/skilldetails/{{i[1]}}">{{i[2]}}</a>
+              </button>
+            </li>
+          </ul>
+
+          {%endfor%}
+        </div>
+      </div>
+
+      <div class="personal-field">
+        <div class="personal-title">
+          <p id="skillset">
+            <i class="fa fa-list"></i>&nbsp;&nbsp;Personal Details
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="site-2">
+    <div class="skillset-page">
+        <div class="skillset-form">
+            <form action="/employeeinfo/{{i[0]}}" method="post">
+ <input type="text" id="skill-input" name="skills" placeholder="Enter the skill name one at a time"><br><br>
+<input type="submit" id="submit-button">
+
+            </form>
+            <button id="cancel-button" onclick="Cancel()">Cancel</button>
+        </div>
+        
+    </div>
+    </div> -->
+
+    {%endfor%}
+  </body>
+</html>

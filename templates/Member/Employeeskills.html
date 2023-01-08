@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='Employeeskills.css')}}"
+    />
+    <link rel="icon" href="/static/Assets/hr-icon.png" />
+  </head>
+  <body>
+    <div id="site-2">
+      <div class="skillset-page">
+        <div class="skillset-form">
+
+            
+          <form action="/employeeskills/{{id}}" method="post">
+            <input
+              type="text"
+              id="skill-input"
+              name="skills"
+              required
+              placeholder="Enter the skill name one at a time"
+            />
+            <br>
+            <input type="number" min="0" max="10" id="skill-rate" required placeholder="Enter the ratings">
+            <br /><br />
+            <input type="submit" id="submit-button" />
+          </form>
+
+
+
+          <a href="/employeeinfo/{{id}}"
+            ><button id="cancel-button">Cancel</button></a
+          >
+        </div>
+      </div>
+    </div>  
+  </body>
+</html>

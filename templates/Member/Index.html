@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professionals</title>
+    
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+    <!-- <link rel="icon" href="{{url_for('static',filename='Assets/hr-icon.png')}}> -->
+    <link rel="icon" href="/static/Assets/hr-icon.png">
+
+</head>
+<body>
+    <div class="heading">
+        <h2>Professionals </h2>
+    </div>
+    <div class="about">
+     <b>A Human Resource Management software for business which gives right solution to the employee at your Organization.</b>
+    </div>
+    <div class="menu">
+        <h2 id="tab-1">Search Team Members</h2>
+        <h2 id="tab-2">View your Organization profile</h2>
+        <h2 id="tab-3">Register your cases</h2>
+       
+    </div>
+    <div class="sigin">
+        <h2 id="sigin-tab"><a href="{{url_for('signin')}}">Sigin </h2>
+    </div>
+</body>
+</html>

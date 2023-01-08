@@ -1,0 +1,64 @@
+body {
+  background-color: rgba(26, 2, 2, 0.804);
+}
+
+#site-2 {
+  margin-top: 180px;
+}
+
+.skillset-page {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  margin-left: 530px;
+  padding-left: 100px;
+  padding-top: 50px;
+  border-radius: 5px;
+}
+
+#skill-input {
+  width: 300px;
+  height: 100px;
+  font-size: 14px;
+  border-style: inherit;
+}
+
+#skill-rate{
+  width: 300px;
+  height: 20px;
+  margin-top: 10px;
+  border-style: inherit;
+
+}
+
+#submit-button {
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(175, 106, 240);
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  margin-left: 70px;
+}
+
+#cancel-button {
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+  background-color: rgb(215, 75, 75);
+  border-radius: 5px;
+  padding-top: 5px;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+.button-fields {
+  display: inline-flex;
+}/*# sourceMappingURL=Employeeskills.css.map */
